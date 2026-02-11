@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int N = scanner.nextInt();
+        int[] originalArray = new int[N];
+        for (int i = 0; i < N; i++) {
+            originalArray[i] = scanner.nextInt();
+        }
+        int[] copiedArray = new int[N];
+        for (int i = 0; i < N; i++) {
+            copiedArray[i] = originalArray[i];
+        }
+        for (int i = 0; i < N; i++) {
+            System.out.print(copiedArray[i] + (i == N - 1 ? "" : " "));
+        }
+    }
+}
