@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        scanner.close();
+        int count = 0;
+        String lowerCaseS = s.toLowerCase();
+        for (int i = 0; i < lowerCaseS.length(); i++) {
+            char ch = lowerCaseS.charAt(i);
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                count++;
+            }
+        }
+
+        System.out.println(count);
+    }
+}
