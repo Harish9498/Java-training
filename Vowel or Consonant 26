@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+    
+        Scanner scanner = new Scanner(System.in);
+        if (scanner.hasNext()) {
+            char ch = scanner.next().charAt(0);
+            
+            if (Character.isLetter(ch)) {
+                switch (Character.toLowerCase(ch)) {
+                    case 'a':
+                    case 'e':
+                    case 'i':
+                    case 'o':
+                    case 'u':
+                        System.out.println("Vowel");
+                        break;
+                    default:
+                        System.out.println("Consonant");
+                        break;
+                }
+            }
+        }
+        scanner.close();
+    }
+}
+
