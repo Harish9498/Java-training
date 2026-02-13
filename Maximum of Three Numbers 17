@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+   static int largest (int a,int b,int c)
+   {
+         int largest;
+        if (a >= b && a >= c) {
+          return a;
+        } else if (b >= a && b >= c) {
+           return b;
+        } else {
+          return c;
+        }
+        
+    }
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        Solution ob =new Solution();
+        int a=s.nextInt();
+        int b=s.nextInt();
+        int c=s.nextInt();
+    System.out.print(ob.largest(a,b,c));
+    } 
+                
+}
