@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+public class ReverseNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        scanner.close();
+        int reversed = reverse(n);
+        System.out.println(reversed);
+    }
+
+    public static int reverse(int n) {
+        int reversedNum = 0;
+        int num = n;
+        while (num != 0) {
+            int digit = num % 10;
+            reversedNum = reversedNum * 10 + digit;
+            num /= 10;
+        }
+        return reversedNum;
+    }
+}
