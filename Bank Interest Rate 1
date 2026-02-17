@@ -1,0 +1,43 @@
+import java.io.*;
+import java.util.Scanner;
+class Bank {
+    public double gRate() {
+        return 0.0;
+    }
+}
+class SBI extends Bank {
+  
+    public double gRate() {
+        return 6.5;
+    }
+}
+class HDFC extends Bank {
+    public double gRate() {
+        return 7.0;
+    }
+}
+class ICICI extends Bank {
+    public double gRate() {
+        return 6.8;
+    }
+}
+public class BankInterest {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String bankName = scanner.nextLine();
+        scanner.close();
+        Bank bank;
+        if (bankName.equalsIgnoreCase("SBI")) {
+            bank = new SBI();
+            System.out.println(bank.gRate() + "%");
+        } else if (bankName.equalsIgnoreCase("HDFC")) {
+            bank = new HDFC();
+            System.out.println(bank.gRate() + "%");
+        } else if (bankName.equalsIgnoreCase("ICICI")) {
+            bank = new ICICI();
+            System.out.println(bank.gRate() + "%");
+        } else {
+            System.out.println("Invalid Bank Name");
+        }
+    }
+}
