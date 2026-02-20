@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+class InvalidAgeException extends Exception {
+    InvalidAgeException(String message) {
+        super(message);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int age = sc.nextInt();
+        try {
+            validate(age);
+            System.out.println("Eligible");
+        } catch (InvalidAgeException e) {
+            System.out.println("Invalid Age");
+        }
+    }
+    static void validate(int age) throws InvalidAgeException {
+        if (age < 18) {
+            throw new InvalidAgeException("Invalid Age");
+        }
+    }
+}
